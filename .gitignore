@@ -1,0 +1,7 @@
+/.git
+/.idea
+/venv
+/db.sqlite3
+/cypressTestingSite/__pycache__
+/cypressTestingSite/migrations
+//cypressTesting/__pycache__

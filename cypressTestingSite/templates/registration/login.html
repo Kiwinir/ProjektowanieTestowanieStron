@@ -1,0 +1,24 @@
+<!-- templates/registration/login.html -->
+{% extends "base.html" %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../../static/css/loginStylesheet.css">
+<div class="login-signupbox">
+    <h1>Log In</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username">
+        <label style="font-size: 18px; display: block; margin-left: 20px;">Password</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password">
+        {#  {{ form.as_p }}#}
+        <input type="submit" value="Sign In">
+    </form>
+    <label class="login-signup-text">Don't have an account?
+        <a href="{% url 'signup' %}">Click here</a>
+    </label>
+</div>
+{% endblock %}
